@@ -32,8 +32,8 @@ This is a simple Python application that allows you to convert image files (such
 1.  **Clone the repository (Optional):** If you have the code in a Git repository, clone it to your local machine:
 
     ```bash
-    git clone [https://github.com/your-username/your-repo-name.git](https://github.com/your-username/your-repo-name.git)
-    cd your-repo-name
+    git clone https://github.com/abdullahjaved40/img_to_pdf
+    cd img_to_pdf
     ```
 
 2.  **Run the script:** Open a terminal or command prompt and navigate to the directory where you saved the Python script (e.g., `image_to_pdf.py`). Then, run the script:
