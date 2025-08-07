@@ -1,95 +1,102 @@
-# Image to PDF Converter
+# 🖼️ Image to PDF Converter
 
-## Overview
+## 📄 Overview
 
-This is a simple Python application that allows you to convert image files (such as PNG, JPG, JPEG, GIF, and BMP) to PDF files. It provides a graphical user interface (GUI) built with Tkinter for easy image selection and conversion. The application uses the Pillow (PIL) library to handle image processing and PDF creation.
+Image to PDF Converter is a simple Python application that lets you convert image files (PNG, JPG, JPEG, GIF, BMP) to PDF. It features a clean, user-friendly GUI built with Tkinter, and leverages the Pillow (PIL) library for image handling and PDF generation.
 
-## Features
+---
 
-* **Image to PDF Conversion:** Converts image files to PDF format.
-* **GUI Interface:** Provides a user-friendly graphical interface for selecting image files and initiating the conversion process.
-* **File Selection:** Uses a file dialog to allow users to easily select the image file they want to convert.
-* **Error Handling:** Includes error handling to gracefully manage issues such as invalid file selection or conversion failures, displaying informative error messages to the user.
-* **Status updates:** Provides feedback to the user on the status of the image selection and conversion process.
+## ✨ Features
 
-## Technologies Used
+- **Image to PDF Conversion** – Quickly convert image files into PDFs.
+- **User-Friendly GUI** – Intuitive interface built with Tkinter.
+- **File Selection Dialog** – Easily select image files via a file browser.
+- **Robust Error Handling** – Handles invalid selections and displays descriptive error messages.
+- **Status Updates** – Get real-time feedback during image selection and conversion.
 
-* Python
-* Tkinter (for the GUI)
-* Pillow (PIL) (for image processing)
+---
 
-## Prerequisites
+## 🛠️ Technologies Used
 
-* Python 3.x
-* Pillow library. You can install it using pip:
+- Python 3.x
+- Tkinter (GUI)
+- Pillow (PIL)
 
-    ```bash
-    pip install Pillow
-    ```
+---
 
-## How to Use
+## 🔧 Prerequisites
 
-1.  **Clone the repository (Optional):** If you have the code in a Git repository, clone it to your local machine:
+Ensure you have Python 3 installed and install the Pillow library:
 
-    ```bash
-    git clone https://github.com/abdullahjaved40/img_to_pdf
-    cd img_to_pdf
-    ```
+```bash
+pip install Pillow
+```
 
-2.  **Run the script:** Open a terminal or command prompt and navigate to the directory where you saved the Python script (e.g., `image_to_pdf.py`). Then, run the script:
+## 🚀 How to Use
+1. **Clone the Repository**
 
-    ```bash
-    python image_to_pdf.py
-    ```
+```bash
+git clone https://github.com/AbdullahJaveid/img-to-pdf.git
+cd img-to-pdf
+```
 
-3.  **Select an image:** The application window will appear. Click the "Browse" button to open a file dialog and select the image file you want to convert.
+2. **Run the Script**
 
-4.  **Convert to PDF:** After selecting an image, the "Convert to PDF" button will become enabled. Click this button to start the conversion.
+Open a terminal and run:
 
-5.  **View the PDF:** Once the conversion is complete, the application will display a success message, and the generated PDF file will open in your default PDF viewer.  Any errors during the conversion process will be displayed in an error message box.
+On Windows:
+```cmd
+python main.py
+```
+On Mac/Linux:
+```bash
+python3 main.py
+```
 
-## Code Explanation
+3. **Convert Images to PDF**
 
-The core functionality of the script is as follows:
+- Use the Browse button to select an image.
 
-* **Imports:**
-    * `tkinter`:  Used to create the graphical user interface.
-    * `filedialog`:  Used to open the file dialog for selecting image files.
-    * `messagebox`: Used to display dialog boxes, such as error or success messages.
-    * `os`: Used to open the converted PDF file with the default viewer.
-    * `PIL (Pillow)`: Used for opening, processing, and saving the image as a PDF.
-* **`ImageToPDFConverter` Class:**
-    * `__init__(self)`:
-        * Initializes the Tkinter window and sets up the GUI elements (labels, entry, buttons).
-        * The "Convert to PDF" button is initially disabled.
-        * The `mainloop()` method starts the Tkinter event loop, making the GUI responsive.
-    * `select_image(self)`:
-        * Opens a file dialog using `filedialog.askopenfilename()` to allow the user to select an image file.
-        * Filters for common image file types (`.png`, `.jpg`, `.jpeg`, `.gif`, `.bmp`).
-        * Updates the `image_path` StringVar with the selected file path.
-        * Enables the "Convert to PDF" button after a valid image is selected.
-    * `convert(self)`:
-        * Gets the image file path from the `image_path` StringVar.
-        * Opens the image using `PIL.Image.open()`.
-        * Constructs the PDF file path by changing the file extension.
-        * Saves the image as a PDF using `img.save(pdf_path, "PDF")`.
-        * Displays a success message using `messagebox.showinfo()`.
-        * Opens the generated PDF file using `os.startfile()`.
-        * Handles potential errors (e.g., file errors, conversion issues) with a `try...except` block and displays an error message using `messagebox.showerror()`.
-* **`if __name__ == "__main__":` Block:**
-    * Ensures that the `ImageToPDFConverter` class is instantiated and the application runs only when the script is executed directly (not when imported as a module).
+- Click Convert to PDF to begin conversion.
 
-## Contributing
+- Upon success, the resulting PDF will open automatically.
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, feel free to open an issue or submit a pull request.
+## 🔍 Code Breakdown
 
-1.  Fork the repository.
-2.  Create a new branch for your feature or bug fix.
-3.  Make your changes.
-4.  Commit your changes.
-5.  Push to the branch.
-6.  Submit a pull request.
+### 📦 Imports
 
-## License
+`tkinter`, `filedialog`, `messagebox` – GUI and file interaction.
 
-No License
+os – Open PDF with default system viewer.
+
+PIL (Pillow) – Image manipulation and PDF saving.
+
+🧩 `ImageToPDFConverter` **Class**
+
+`__init__()` – Initializes GUI components.
+
+`select_image()` – Allows image selection and updates path.
+
+`convert()` – Converts selected image to PDF and opens it.
+
+### 🔁 Main Execution
+
+```python
+if __name__ == "__main__":
+    ImageToPDFConverter()
+```
+
+Ensures the application runs only when the script is executed directly.
+
+### 🤝 Contributing
+Contributions are welcome!
+
+1. Fork the repository.
+
+2. Create a new branch.
+
+3. Make your changes.
+
+4. Commit and push.
+
+5. Submit a Pull Request.
